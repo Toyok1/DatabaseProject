@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>DBProject</title>
+    <script src="jquery/dist/jquery.slim.min.js"></script>
+</head>
+<body>
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div class="dropdown" style="margin: auto;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Operazione Desiderata
+        </button>
+        <div class="dropdown-content">
+          <p onclick="loadService1()">Inserire Studio</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService2()">Rimuovere Studio</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService3()">Inserire Cliente</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService4()">Rimuovere Cliente</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService5()">Inserire Tecnico</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService6()">Rimuovere Tecnico</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService7()">Update anagrafiche</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService8()">Inserisci prenotazione</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService9()">Visualizza occupazione sale per giornata</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService10()">Visualizza Clienti</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService11()">Visualizza tecnici</p>
+          <div class="dropdown-divider"></div>
+          <p onclick="loadService12()">Visualizza utilizzo attrezzatura</p>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <p class="my-4">culotetteculosparatemistoprogettomiammazzadiocca</span>
+      </div>
+    
+</body>
+</html>
+
+
+<!--
+
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</span
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</span
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+
+-->
+
+
+<!--
+
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div> 
+
+-->
