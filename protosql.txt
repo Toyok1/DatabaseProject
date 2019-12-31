@@ -1,0 +1,45 @@
+DROP    TABLE IF EXISTS `Studio`; 
+CREATE TABLE `Studio`(
+	Codice_Fiscale_Studio	CHAR(16) NOT NULL PRIMARY KEY,
+	Nome 			CHAR(20) NOT NULL,
+	Email 			CHAR(100) NOT NULL,
+	NumTel 			CHAR(10) 
+)
+
+DROP    TABLE IF EXISTS `Sessione`; 
+CREATE TABLE `Sessione`(
+	Codice_ID 		CHAR(10) NOT NULL PRIMARY KEY,
+	Data 			DATE NOT NULL,
+	Inizio 			TIMESTAMP NOT NULL,
+	Fine 			TIMESTAMP DEFAULT NOW() NOT NULL
+)
+
+DROP    TABLE IF EXISTS `Attrezatura`; 
+CREATE TABLE `Attrezzatura`(
+	Codice_Attr 		CHAR(10) NOT NULL PRIMARY KEY,
+	Tipo 			CHAR(10) NOT NULL
+)
+
+DROP    TABLE IF EXISTS `Sala`; 
+CREATE TABLE `Sala`(
+	Codice_Sala 		CHAR(10) NOT NULL PRIMARY KEY
+)
+
+DROP    TABLE IF EXISTS `Brano`; 
+CREATE TABLE `Brano`(
+	Codice_Brano CHAR(10) 	NOT NULL PRIMARY KEY,
+	Nome 			CHAR(473) NOT,
+	Artista 		CHAR(20) NOT NULL
+	
+)
+
+DROP TABLE IF EXISTS `Persona`;
+CREATE TABLE `Persona`(
+	Codice_Fiscale_Persone CHAR(16) NOT NULL PRIMARY KEY,
+	Nome CHAR(20) NOT NULL,
+	Cognome CHAR(20) NOT NULL,
+	Telefono CHAR(10),
+	Email CHAR(100) NOT NULL,
+	Type CHAR(1) NOT NULL,
+	Numero_Reg MEDIUMINT(255)
+)

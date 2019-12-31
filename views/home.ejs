@@ -1,9 +1,11 @@
 <html>
 <head>
     <title>DBProject</title>
-    <script src="jquery/dist/jquery.slim.min.js"></script>
+    
 </head>
 <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
     <style>
         .dropdown {
           position: relative;
@@ -23,71 +25,50 @@
         .dropdown:hover .dropdown-content {
           display: block;
         }
+        .button-custom{
+          margin: 1%;
+        }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-    </table>
-    <hr>
-    <div class="dropdown" style="margin: auto;">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Operazione Desiderata
-        </button>
-        <div class="dropdown-content">
-          <p onclick="loadService1()">Inserire Studio</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService2()">Rimuovere Studio</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService3()">Inserire Cliente</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService4()">Rimuovere Cliente</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService5()">Inserire Tecnico</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService6()">Rimuovere Tecnico</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService7()">Update anagrafiche</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService8()">Inserisci prenotazione</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService9()">Visualizza occupazione sale per giornata</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService10()">Visualizza Clienti</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService11()">Visualizza tecnici</p>
-          <div class="dropdown-divider"></div>
-          <p onclick="loadService12()">Visualizza utilizzo attrezzatura</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <p class="navbar-brand">Consorzio Studi di registrazione Verdi</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <% if (0) { %>
+          <a href="/auth/login"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button></a>
+    
+          <% } else { %>
+          <a href="/auth/logout"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button></a>
+          <% } %>
+      </div>
+    </nav>
+          <button type="button" class="btn btn-dark button-custom" onclick="consultaStudio()">Consulta Studio                          </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="consultaSala()">Consulta Sala                          </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService1()">Inserire Studio                          </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService2()">Rimuovere Studio                         </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService3()">Inserire Cliente                         </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService4()">Rimuovere Cliente                        </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService5()">Inserire Tecnico                         </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService6()">Rimuovere Tecnico                        </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService7()">Update anagrafiche                       </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService8()">Inserisci prenotazione                   </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService9()">Visualizza occupazione sale per giornata </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService10()">Visualizza Clienti                      </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService11()">Visualizza tecnici                      </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="loadService12()">Visualizza utilizzo attrezzatura        </button>
+          <button type="button" class="btn btn-dark button-custom" onclick="ripristina()">Pulisci tutto        </button>
         </div>
       </div>
-      <div class="jumbotron">
-        <p class="my-4">culotetteculosparatemistoprogettomiammazzadiocca</span>
+      <div class="jumbotron" id="jumbo">
+        <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet maximus orci, quis facilisis lorem accumsan sed. Curabitur id quam nec eros pellentesque sollicitudin vel nec sapien. Proin placerat erat nec condimentum malesuada. Pellentesque varius vitae velit eu imperdiet. Nam efficitur pretium rhoncus. Pellentesque turpis nisi, tincidunt sed nunc efficitur, volutpat cursus velit. Aenean est arcu, ullamcorper rutrum erat non, finibus finibus dolor. Praesent dolor erat, feugiat vel maximus ac, interdum eget sapien. Duis nec venenatis odio. Maecenas nec ante elit. Praesent egestas interdum velit in ultricies. Nulla nec euismod tellus. Nulla nec ipsum mi. Praesent interdum posuere mi, id congue sem placerat at. </p>
       </div>
     
 </body>
