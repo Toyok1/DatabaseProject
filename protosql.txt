@@ -43,3 +43,10 @@ CREATE TABLE `Persona`(
 	Type CHAR(1) NOT NULL,
 	Numero_Reg MEDIUMINT(255)
 )
+
+----------------------------------------------------------------
+
+
+INSERT INTO Persona VALUES('codfiscale','nome','cognome','telefono','email','type')
+
+
